@@ -6,7 +6,7 @@ define(function () {
                 format: '%v%s'
             },
             modal: {
-                preorder: 'Afrostream en illimité pendant 1 an pour seulement 13 centimes par jour.',
+                preorder: 'Afrostream en illimité pendant 1 an pour 49,99€ au lieu de 84€',
                 charged: 'Profitez des films et series avant première dès 1er septembre 2015.',
                 footer: 'Abonnez vous maintenant. Vous profitez du service en avant première dès 1er septembre.'
             },
@@ -37,8 +37,8 @@ define(function () {
                     }
                 },
                 contact: 'Information',
-                name: 'Nom',
-                lastName: 'Prénom',
+                name: 'Prénom',
+                lastName: 'Nom',
                 email: 'votre-mail@courriel.com',
                 pay: 'Information de paiement',
                 promo: 'Code Promo',
