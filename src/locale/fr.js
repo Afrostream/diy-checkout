@@ -12,7 +12,7 @@ define(function () {
             },
             overlay: {},
             confirmation: {
-                thanks: 'Merci pour votre soutien !',
+                thanks: 'Merci pour votre commande et bienvenue dans la famille Afrostream. Nous vous attendons avec impatience dès le 1er septembre.',
                 emailConfirm: 'Un courriel de confirmation vous a été envoyé. Votre numéro de commande est ',
                 share: 'Partager avec vos amis !',
                 shareMsg: {title: 'J’ai précommande mon ', from: 'via '}
