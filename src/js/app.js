@@ -210,11 +210,11 @@ define(function (require) {
 
                 var product = data.line_items[0];
                 _gaq.push(['_addItem',
-                    product['product_id'],           // transaction ID - required
+                    product['product_id'] + '-FR-EUR',           // transaction ID - required
                     product['celery_sku'],           // SKU/code - required
                     product['product_name'],        // product name
                     product['variant_name'],   // category or variation
-                    product['price'],          // unit price - required
+                    this._getTotal(),//product['price'],          // unit price - required
                     product['quantity']              // quantity - required
                 ]);
                 _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
