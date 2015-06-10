@@ -7,7 +7,7 @@ define(function () {
             },
             modal: {
                 preorder: 'Afrostream en illimité pendant 1 an pour 49,99€ au lieu de 84€',
-                charged: 'Profitez des films et series en avant première des le 1er septembre 2015.',
+                charged: 'Soit 5 mois de films et séries offerts à partir du 1er septembre 2015',
                 footer: 'Abonnez vous maintenant. Vous profitez du service en avant première des le 1er septembre.'
             },
             overlay: {},
@@ -15,7 +15,10 @@ define(function () {
                 thanks: 'Merci pour votre commande et bienvenue dans la famille Afrostream. Nous vous attendons avec impatience dès le 1er septembre.',
                 emailConfirm: 'Un courriel de confirmation vous a été envoyé. Votre numéro de commande est ',
                 share: 'Partager avec vos amis !',
-                shareMsg: {title: 'J’ai précommande mon ', from: 'via '}
+                shareMsg: {
+                    title: 'Je viens de prendre un abonnement sur www.afrostream.tv c’est en réduction ! C’est le meilleur moyen de voir les films  et séries afro qui ne passent jamais en France ',
+                    from: 'via '
+                }
             },
             form: {
                 processing: 'Paiement en cours...',
