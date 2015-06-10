@@ -171,7 +171,64 @@ define(function (require) {
         },
 
         onConfirmation: function (data) {
-            // Runs on confirmation with order data
+            //PUSH TRACKING FB
+            if (config.features.facebookTrackingId !== false) {
+                var _fbq = window._fbq || (window._fbq = []);
+                if (!_fbq.loaded) {
+                    var fbds = document.createElement('script');
+                    fbds.async = true;
+                    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(fbds, s);
+                    _fbq.loaded = true;
+                }
+                window._fbq = window._fbq || [];
+                window._fbq.push(['track', config.features.facebookTrackingId, {
+                    'value': this._getTotal(),
+                    'currency': data.currency
+                }]);
+            }
+            //PUSH TRACKING GOOGLE
+            if (config.features.googleAnalyticksTrackingId) {
+                var _gaq = window._gaq || (window._gaq = []);
+                _gaq.push(['_setAccount', config.features.googleAnalyticksTrackingId]);
+                _gaq.push(['_trackPageview']);
+                _gaq.push(['_addTrans',
+                    data._id,           // transaction ID - required
+                    data.seller._id,  // affiliation or store name
+                    this._getTotal(),          // total - required
+                    data.taxes,           // tax
+                    data.shipping,              // shipping
+                    data.shipping_address.city,       // city
+                    data.shipping_address.state,     // state or province
+                    data.shipping_address.country             // country
+                ]);
+
+                // add item might be called for every item in the shopping cart
+                // where your ecommerce engine loops through each item in the cart and
+                // prints out _addItem for each
+
+                var product = data.line_items[0];
+                _gaq.push(['_addItem',
+                    product['product_id'],           // transaction ID - required
+                    product['celery_sku'],           // SKU/code - required
+                    product['product_name'],        // product name
+                    product['variant_name'],   // category or variation
+                    product['price'],          // unit price - required
+                    product['quantity']              // quantity - required
+                ]);
+                _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
+
+                (function () {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                })();
+
+            }
         },
 
         handleError: function (err) {
