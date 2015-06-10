@@ -16,7 +16,7 @@ define(function () {
                 emailConfirm: 'Un courriel de confirmation vous a été envoyé. Votre numéro de commande est ',
                 share: 'Partager avec vos amis !',
                 shareMsg: {
-                    title: 'Je viens de prendre un abonnement sur www.afrostream.tv c’est en réduction ! C’est le meilleur moyen de voir les films  et séries afro qui ne passent jamais en France ',
+                    title: 'Je viens de prendre un abonnement sur www.afrostream.tv en réduction ! Le meilleur moyen de voir les films et séries afro qui ne passent jamais en France',
                     from: 'via '
                 }
             },

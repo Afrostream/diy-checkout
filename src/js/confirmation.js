@@ -33,10 +33,12 @@ define(function (require) {
 
         generateFacebookHref: function (data) {
             var website = this._getWebsite();
+            var productName = this._getProductName();
             var slug = this._getSlug();
 
             var qs = $.param({
-                u: website
+                u: website,
+                t: productName
             });
 
             return 'https://www.facebook.com/sharer/sharer.php?' + qs;
