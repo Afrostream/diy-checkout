@@ -11,7 +11,7 @@ define(function (require) {
             shipping: false,
             taxes: false,
             coupons: true,
-            facebookTrackingId: '6025819653425',
+            facebookTrackingId: '914487875264661',
             googleAnalyticksTrackingId: 'UA-47871575-3'
         }
     };
