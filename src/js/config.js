@@ -8,6 +8,7 @@ define(function (require) {
         //slug: '5577bb6509b0fd0a0036e4d3',
         features: {
             quantity: false,
+            minimumQuantity: 1,
             shipping: false,
             taxes: false,
             coupons: true,

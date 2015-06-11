@@ -407,7 +407,7 @@ define(function (require) {
         },
 
         _getQuantity: function () {
-            return this._getFieldValue('quantity');
+            return Math.max(this._getFieldValue('quantity') || config.features.minimumQuantity, config.features.minimumQuantity);
         },
 
         _getCountry: function () {
