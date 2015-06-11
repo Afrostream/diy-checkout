@@ -11,8 +11,17 @@ define(function (require) {
             shipping: false,
             taxes: false,
             coupons: true,
-            facebookTrackingId: '914487875264661',
-            googleAnalyticksTrackingId: 'UA-47871575-3'
+            //facebookTrackingId: '914487875264661',
+            facebook: {
+                trackingId: null,
+                form: "./payment.html",
+                confirmation: "/.confirmation.html"
+            },
+            google: {
+                trackingId: 'UA-47871575-3',
+                form: null,
+                confirmation: null
+            }
         }
     };
 });

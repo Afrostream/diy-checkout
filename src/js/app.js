@@ -172,7 +172,7 @@ define(function (require) {
 
         onConfirmation: function (data) {
             //PUSH TRACKING FB
-            if (config.features.facebookTrackingId !== false) {
+            if (config.features.facebook.trackingId !== false) {
                 var _fbq = window._fbq || (window._fbq = []);
                 if (!_fbq.loaded) {
                     var fbds = document.createElement('script');
@@ -183,15 +183,15 @@ define(function (require) {
                     _fbq.loaded = true;
                 }
                 window._fbq = window._fbq || [];
-                window._fbq.push(['track', config.features.facebookTrackingId, {
+                window._fbq.push(['track', config.features.facebook.trackingId, {
                     'value': this._getTotal(),
                     'currency': data.currency
                 }]);
             }
             //PUSH TRACKING GOOGLE
-            if (config.features.googleAnalyticksTrackingId) {
+            if (config.features.google.trackingId) {
                 var _gaq = window._gaq || (window._gaq = []);
-                _gaq.push(['_setAccount', config.features.googleAnalyticksTrackingId]);
+                _gaq.push(['_setAccount', config.features.google.trackingId]);
                 _gaq.push(['_trackPageview']);
                 _gaq.push(['_addTrans',
                     data._id,           // transaction ID - required
