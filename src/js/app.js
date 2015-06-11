@@ -89,7 +89,7 @@ define(function (require) {
             if (!shop.data.user_id) {
                 this.loadShop();
             }
-
+            $(document.body).css('overflow', 'hidden');
             $(document.body).append(this.children);
             this.showShop();
             // Sets display
@@ -109,7 +109,7 @@ define(function (require) {
             var self = this;
 
             this.clear();
-
+            $(document.body).css('overflow', 'auto');
             // is-hidden uses opacity/transform so the transition occurs
             this.$overlay.addClass('is-hidden');
             this.$el.addClass('is-hidden');
