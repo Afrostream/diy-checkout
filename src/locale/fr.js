@@ -16,7 +16,7 @@ define(function () {
                 emailConfirm: 'Un courriel de confirmation vous a été envoyé. Votre numéro de commande est ',
                 share: 'Partager avec vos amis !',
                 shareMsg: {
-                    title: 'Je viens de prendre un abonnement sur www.afrostream.tv en réduction! Vos films et séries afro en illimité pendant 1 an',
+                    title: 'C’est parti, je suis abonné à AFROSTREAM pour des films et séries afro inédits en illimité ',
                     from: 'via '
                 }
             },

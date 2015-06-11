@@ -38,7 +38,7 @@ define(function (require) {
 
             var qs = $.param({
                 u: website,
-                t: productName
+                s: productName
             });
 
             return 'https://www.facebook.com/sharer/sharer.php?' + qs;
@@ -54,14 +54,12 @@ define(function (require) {
             var pieces = [];
 
             if (productName) {
-                pieces.push(locale.confirmation.shareMsg.title + productName);
+                pieces.push(locale.confirmation.shareMsg.title);
             }
 
             if (twitterHandle) {
                 pieces.push(locale.confirmation.shareMsg.from + twitterHandle);
             }
-
-            //pieces.push('on @trycelery');
 
             var qs = $.param({
                 url: website,
