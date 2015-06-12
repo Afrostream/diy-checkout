@@ -189,6 +189,7 @@ define(function (require) {
                 }]);
             }
             //PUSH TRACKING GOOGLE
+            var totl = Math.max(0, this._getTotal() / 100);
             if (config.features.google.trackingId) {
                 var _gaq = window._gaq || (window._gaq = []);
                 _gaq.push(['_setAccount', config.features.google.trackingId]);
@@ -196,7 +197,7 @@ define(function (require) {
                 _gaq.push(['_addTrans',
                     data._id,           // transaction ID - required
                     data.seller._id,  // affiliation or store name
-                    this._getTotal(),          // total - required
+                    totl,          // total - required
                     data.taxes,           // tax
                     data.shipping,              // shipping
                     data.shipping_address.city,       // city
@@ -214,7 +215,7 @@ define(function (require) {
                     product['celery_sku'],           // SKU/code - required
                     product['product_name'],        // product name
                     product['variant_name'],   // category or variation
-                    this._getTotal() / 100,//product['price'],          // unit price - required
+                    totl,//product['price'],          // unit price - required
                     product['quantity']              // quantity - required
                 ]);
                 _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
