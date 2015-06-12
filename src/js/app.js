@@ -214,7 +214,7 @@ define(function (require) {
                     product['celery_sku'],           // SKU/code - required
                     product['product_name'],        // product name
                     product['variant_name'],   // category or variation
-                    this._getTotal(),//product['price'],          // unit price - required
+                    this._getTotal() / 100,//product['price'],          // unit price - required
                     product['quantity']              // quantity - required
                 ]);
                 _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
