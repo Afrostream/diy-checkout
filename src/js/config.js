@@ -16,7 +16,7 @@ define(function (require) {
             facebook: {
                 trackingId: null,
                 form: "./payment.html",
-                confirmation: "/.confirmation.html"
+                confirmation: "./confirmation.html"
             },
             google: {
                 trackingId: 'UA-47871575-3',
