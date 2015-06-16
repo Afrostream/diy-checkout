@@ -1,4 +1,5 @@
 define(function (require) {
+    var config = require('config');
     var template = require('templates/index').confirmation;
     var shopData = require('shop').data;
     var locale = require('../locale/fr');
@@ -19,7 +20,7 @@ define(function (require) {
         $el: null,
         template: template,
         render: function (data) {
-            data = $.extend(data || this.data || {}, locale.confirmation);
+            data = $.extend(data || this.data || {}, config, locale.confirmation);
             data.twitterHref = this.generateTwitterHref();
             data.facebookHref = this.generateFacebookHref();
             data.mailHref = this.generateMailHref();
