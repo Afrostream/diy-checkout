@@ -6,6 +6,7 @@ define(function (require) {
         //apiHost: 'https://api-sandbox.trycelery.com',
         //apiHost: 'https://api.trycelery.com',
         //slug: '5577bb6509b0fd0a0036e4d3',
+        host: 'http://bit.ly/AFROSTREAMTV',
         features: {
             quantity: false,
             minimumQuantity: 1,

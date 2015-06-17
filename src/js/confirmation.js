@@ -104,7 +104,7 @@ define(function (require) {
 
         _getWebsite: function () {
             var slug = this._getSlug();
-            return shopData.website || 'https://shop.trycelery.com/page/' + slug;
+            return config.host || shopData.website || 'https://shop.trycelery.com/page/' + slug;
         }
     }
 });
