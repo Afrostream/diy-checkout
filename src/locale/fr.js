@@ -8,7 +8,7 @@ define(function () {
             modal: {
                 preorder: 'Afrostream pendant 1 an pour 49,99€ au lieu de 84€',
                 charged: 'Soit 5 mois de films et séries offerts à partir du 1er septembre 2015',
-                footer: 'Abonnez vous maintenant. Vous profitez du service en avant première des le 1er septembre.'
+                footer: 'Abonnez vous maintenant. Vous profitez du service en avant première dès le 1er septembre.'
             },
             overlay: {},
             confirmation: {
